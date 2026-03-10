@@ -1,177 +1,5 @@
 
-xgolprvw
-
-<div class="cards">
-
-<article class="card blog-card">
-<p class="blog-date">12 janvier 2026</p>
-<h3>5 règles d'or pour une représentation impeccable</h3>
-<p>Préparation, posture et sens du détail : les éléments qui garantissent une présence professionnelle irréprochable.</p>
-</article>
-
-<article class="card blog-card">
-<p class="blog-date">28 décembre 2025</p>
-<h3>Confidentialité : notre méthode en 3 étapes</h3>
-<p>Une approche structurée pour sécuriser les informations sensibles de nos clients.</p>
-</article>
-
-<article class="card blog-card">
-<p class="blog-date">05 novembre 2025</p>
-<h3>Voyages d'affaires : réussir chaque transition</h3>
-<p>Coordination, anticipation et gestion des imprévus pour assurer la continuité de vos missions.</p>
-</article>
-
-</div>
-</section>
-
-
-<section class="section image-section">
-
-<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
-style="width:100%;max-height:420px;object-fit:cover;border-radius:10px;margin-top:40px;">
-
-</section>
-
-
-<section id="bio" class="section bio">
-
-<div class="bio-card">
-
-<div>
-
-<p class="section-eyebrow">À propos</p>
-
-<h2>Qualitylife-CI</h2>
-
-<p>
-Qualitylife-CI est un service d'assistance privée et de représentation stratégique
-destiné aux dirigeants, investisseurs et entrepreneurs opérant en Côte d'Ivoire.
-</p>
-
-<p>
-Notre mission est d'offrir une présence fiable, discrète et efficace pour
-accompagner les décisions importantes, représenter nos clients dans leurs
-démarches professionnelles et faciliter leurs opérations sur le terrain.
-</p>
-
-<p>
-Nous intervenons avec un haut niveau d'exigence, de confidentialité et de
-professionnalisme afin d'assurer un service digne des standards internationaux.
-</p>
-
-</div>
-
-
-<div class="bio-highlight">
-
-<p class="highlight-title">Valeurs fondamentales</p>
-
-<ul>
-<li>Confidentialité absolue</li>
-<li>Disponibilité et réactivité</li>
-<li>Exécution irréprochable</li>
-<li>Relation de confiance durable</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="contact" class="section contact">
-
-<div class="section-head">
-
-<p class="section-eyebrow">Contact</p>
-
-<h2>Parlons de votre mission</h2>
-
-<p class="section-subtitle">
-Réponse rapide et confidentielle.
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<h3>Coordonnées</h3>
-
-<p>Email : 
-<a href="mailto:contactqualitylifeci@gmail.com">
-contactqualitylifeci@gmail.com
-</a>
-</p>
-
-<p>Téléphone : 
-<a href="tel:+2250500989630">
-+225 05 00 98 96 30
-</a>
-</p>
-
-<p>Adresse : Abidjan, Côte d'Ivoire</p>
-
-</div>
-
-
-<form id="contact-form" class="contact-form" data-formspree-id="xgolprvw">
-
-<label>
-Nom complet
-<input type="text" name="name" placeholder="Votre nom" required>
-</label>
-
-<label>
-Email
-<input type="email" name="email" placeholder="Votre email" required>
-</label>
-
-<label>
-Mission souhaitée
-<textarea name="message" rows="4" placeholder="Décrivez votre besoin" required></textarea>
-</label>
-
-<button type="submit" class="btn primary">
-Envoyer la demande
-</button>
-
-<p class="form-note">
-Remplissez le formulaire puis cliquez sur <strong>Envoyer la demande</strong>.
-</p>
-
-<p class="form-status success" aria-hidden="true">
-Merci — votre message a été envoyé.
-</p>
-
-<p class="form-status error" aria-hidden="true">
-Erreur lors de l'envoi. Veuillez réessayer.
-</p>
-
-</form>
-
-</div>
-
-</section>
-
-
-<footer class="site-footer">
-
-<p>
-© 2026 Qualitylife-CI — Service confidentiel pour dirigeants,
-investisseurs et entrepreneurs.
-</p>
-
-</footer>
-
-
-<a href="https://wa.me/2250500989630" class="whatsapp-button" target="_blank">
-💬
-</a>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
@@ -179,17 +7,29 @@ body{
 background:#0b0b0b;
 color:white;
 font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
 }
 
 h1,h2,h3{
 color:#c8a24c;
 }
 
+.section{
+padding:60px 20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
 .card{
 background:#151515;
+border:1px solid #2a2a2a;
 border-radius:10px;
 padding:25px;
-border:1px solid #2a2a2a;
 }
 
 .bio-card{
@@ -209,6 +49,19 @@ border-radius:8px;
 border:1px solid #2a2a2a;
 }
 
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.contact-card{
+background:#151515;
+padding:25px;
+border-radius:10px;
+border:1px solid #2a2a2a;
+}
+
 .btn.primary{
 background:#c8a24c;
 color:black;
@@ -223,18 +76,19 @@ font-weight:bold;
 background:#e0b95c;
 }
 
-.contact-card{
-background:#151515;
-padding:25px;
-border-radius:10px;
-border:1px solid #2a2a2a;
-}
-
 .site-footer{
 background:#111;
 padding:40px;
 text-align:center;
 margin-top:60px;
+}
+
+.hero-image img{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:10px;
+margin-top:30px;
 }
 
 .whatsapp-button{
@@ -255,7 +109,233 @@ box-shadow:0 5px 15px rgba(0,0,0,0.4);
 z-index:1000;
 }
 
+/* MOBILE */
+
+@media (max-width:768px){
+
+.bio-card{
+grid-template-columns:1fr;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
+
+
+<section class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf"
+alt="Business leader looking at airplane">
+
+</section>
+
+
+<div class="cards">
+
+<article class="card blog-card">
+
+<p class="blog-date">12 janvier 2026</p>
+
+<h3>5 règles d'or pour une représentation impeccable</h3>
+
+<p>Préparation, posture, timing : les détails qui créent l'excellence.</p>
+
+</article>
+
+
+<article class="card blog-card">
+
+<p class="blog-date">28 décembre 2025</p>
+
+<h3>Confidentialité : notre méthode en 3 étapes</h3>
+
+<p>Une approche structurée pour sécuriser vos informations sensibles.</p>
+
+</article>
+
+
+<article class="card blog-card">
+
+<p class="blog-date">05 novembre 2025</p>
+
+<h3>Voyages d'affaires : réussir chaque transition</h3>
+
+<p>Coordonner les équipes et minimiser les imprévus.</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+<section id="bio" class="section bio">
+
+<div class="bio-card">
+
+<div>
+
+<p class="section-eyebrow">Bio</p>
+
+<h2>À propos de moi</h2>
+
+<p>
+
+Qualitylife-CI est un service d'assistance privée et de représentation stratégique dédié aux dirigeants, investisseurs et entrepreneurs opérant en Côte d'Ivoire.
+
+Notre mission est d'offrir une présence fiable, discrète et efficace pour accompagner les décisions importantes.
+
+</p>
+
+<p>
+
+Notre approche repose sur une écoute active, une méthodologie claire et un engagement total envers l'excellence et la confidentialité.
+
+</p>
+
+</div>
+
+
+<div class="bio-highlight">
+
+<p class="highlight-title">Valeurs clés</p>
+
+<ul>
+
+<li>Confidentialité absolue</li>
+
+<li>Disponibilité et réactivité</li>
+
+<li>Exécution irréprochable</li>
+
+<li>Relation de confiance</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact" class="section contact">
+
+<div class="section-head">
+
+<p class="section-eyebrow">Contact</p>
+
+<h2>Parlons de votre mission</h2>
+
+<p class="section-subtitle">Réponse rapide et confidentielle.</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h3>Coordonnées</h3>
+
+<p>Email : 
+<a href="mailto:contactqualitylifeci@gmail.com">contactqualitylifeci@gmail.com</a>
+</p>
+
+<p>Téléphone : 
+<a href="tel:+2250500989630">+225 05 00 98 96 30</a>
+</p>
+
+<p>Adresse : Abidjan, Côte d'Ivoire</p>
+
+</div>
+
+
+<form id="contact-form" class="contact-form" data-formspree-id="xgolprvw">
+
+<label>
+
+Nom complet
+
+<input type="text" name="name" placeholder="Votre nom" required />
+
+</label>
+
+
+<label>
+
+Email
+
+<input type="email" name="email" placeholder="Votre email" required />
+
+</label>
+
+
+<label>
+
+Mission souhaitée
+
+<textarea name="message" rows="4" placeholder="Décrivez votre besoin" required></textarea>
+
+</label>
+
+
+<button type="submit" class="btn primary">
+
+Envoyer la demande
+
+</button>
+
+
+<p class="form-note">
+
+Remplissez le formulaire puis cliquez sur <strong>Envoyer la demande</strong>.
+
+</p>
+
+
+<p class="form-status success" aria-hidden="true">
+
+Merci — votre message a été envoyé.
+
+</p>
+
+
+<p class="form-status error" aria-hidden="true">
+
+Erreur lors de l'envoi. Veuillez réessayer ou contacter par email.
+
+</p>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<footer class="site-footer">
+
+<p>© 2026 Qualitylife-CI - Service confidentiel pour décideurs.</p>
+
+</footer>
+
+
+<a href="https://wa.me/2250500989630" class="whatsapp-button" target="_blank">
+
+💬
+
+</a>
 
 
 <script src="script.js"></script>
