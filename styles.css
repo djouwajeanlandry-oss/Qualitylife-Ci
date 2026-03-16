@@ -399,38 +399,9 @@ a {
 
 .whatsapp-button:hover {
     background-color: #1ebe5d;
-}body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #1a1a1a;
-}
-
-header{
-    background-color: #0a2540;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-h1,h2{
-    color:#0a2540;
-}
-
-button{
-    background-color:#c9a227;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:5px;
-}./* Bannière responsive et compacte */
 .hero-image{
     width:100%;
-    max-height:400px; /* ajuste la hauteur */
-    object-fit:cover;  /* recadrage automatique */
+    max-height:350px;
+    object-fit:cover;
     display:block;
-    margin:0 auto;     /* supprime l’espace vertical */
-}{
-width:100%;
-max-height:450px;
-object-fit:cover;
 }
