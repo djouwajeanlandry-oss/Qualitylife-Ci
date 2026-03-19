@@ -4,25 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qualitylife-CI | Assistance et représentation privée</title>
-  <meta name="description" content="Service d'assistance privée et de représentation. Excellence, discrétion et efficacité pour vos missions personnelles et professionnelles.">
+  <meta name="description" content="Service d'assistance privée et de représentation. Excellence, discrétion et efficacité.">
   <meta name="formspree-id" content="xgolprvw">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+<!-- Bouton WhatsApp -->
 <a href="https://wa.me/2250500989630" class="whatsapp-button" target="_blank">
   💬 WhatsApp
 </a>
 
+<!-- HERO IMAGE -->
 <section class="hero-section">
-  <img src="image.png" class="hero-image" alt="Dirigeant professionnel">
+  <img src="image.png" class="hero-image" alt="Dirigeant professionnel observant un avion depuis son bureau">
   <div class="hero-text">
     <h1>Qualitylife-CI</h1>
     <p>Votre service de conciergerie privée et assistance exécutive</p>
   </div>
 </section>
 
+<!-- HEADER -->
 <header class="site-header">
   <div class="brand">
     <span class="brand-mark">Q</span>
@@ -42,12 +45,14 @@
 
 <main>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <p class="eyebrow">Excellence. Discrétion. Impact.</p>
     <h1>Votre représentation privée, assurée avec rigueur et élégance.</h1>
     <p class="hero-subtitle">
-      Qualitylife-CI accompagne les dirigeants, familles et organisations pour des missions sensibles et exigeantes.
+      Qualitylife-CI accompagne les dirigeants, familles et organisations pour des missions
+      sensibles et exigeantes.
     </p>
     <div class="hero-actions">
       <a class="btn primary" href="#contact">Demander un échange</a>
@@ -56,41 +61,30 @@
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section services">
-  <div class="section-head">
-    <p class="section-eyebrow">Services</p>
-    <h2>Un service complet pour vos besoins privés</h2>
-  </div>
-
+  <h2>Services</h2>
   <div class="cards">
-    <article class="card">
-      <h3>Représentation privée</h3>
-      <p>Présence stratégique à vos événements.</p>
-    </article>
-
-    <article class="card">
-      <h3>Voyages</h3>
-      <p>Organisation et accompagnement.</p>
-    </article>
-
-    <article class="card">
-      <h3>Assistance affaires</h3>
-      <p>Support administratif et stratégique.</p>
-    </article>
+    <article class="card"><h3>Représentation privée</h3></article>
+    <article class="card"><h3>Accompagnement de voyages</h3></article>
+    <article class="card"><h3>Assistance aux affaires</h3></article>
+    <article class="card"><h3>Gestion d'achats</h3></article>
+    <article class="card"><h3>Coordination d'agenda</h3></article>
+    <article class="card"><h3>Conciergerie privée</h3></article>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section contact">
-  <div class="section-head">
-    <h2>Contact</h2>
-  </div>
+  <h2>Contact</h2>
 
-  <form class="contact-form">
-    <input type="text" placeholder="Votre nom" required>
-    <input type="email" placeholder="Votre email" required>
-    <textarea placeholder="Votre message" required></textarea>
-    <button type="submit" class="btn primary">Envoyer</button>
+  <form id="contact-form" data-formspree-id="xgolprvw">
+    <input type="text" name="name" placeholder="Nom" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Votre demande" required></textarea>
+    <button type="submit">Envoyer</button>
   </form>
+
 </section>
 
 </main>
@@ -102,5 +96,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
 </html>
