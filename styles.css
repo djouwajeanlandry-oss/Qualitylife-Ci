@@ -12,10 +12,11 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Bodoni MT", serif;
   color: var(--ink);
   background: radial-gradient(circle at top left, #f6eadc, #f3efe8 40%, #ebe4da 100%);
@@ -24,41 +25,160 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-/* ... tout ton CSS existant pour site-header, brand, nav, hero, sections, cards, etc ... */
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 6vw;
+  background: rgba(246, 242, 235, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+}
 
-/* Hero image correction */
-.hero-section {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--deep);
+  color: #fff;
+  font-size: 22px;
+}
+
+.brand-name { font-weight: 600; font-size: 20px; letter-spacing: 1px; }
+.brand-tag { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px; }
+
+.nav { display: flex; gap: 18px; align-items: center; font-size: 15px; }
+.nav a { color: var(--muted); }
+.nav-cta { padding: 10px 18px; border: 1px solid var(--deep); border-radius: 30px; color: var(--deep); font-size: 14px; }
+
+/* =========================
+   HERO
+========================= */
+.hero-section, .hero {
   position: relative;
-  text-align: center;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  max-height: 400px; /* desktop */
+  height: 400px;
   object-fit: cover;
   display: block;
 }
 
-.hero-text {
+/* overlay sombre pour lisibilité */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-text, .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  z-index: 2;
+  width: 90%;
+  max-width: 800px;
 }
 
-.hero-text h1 { font-size: 2em; }
-.hero-text p { font-size: 1em; }
+.hero-text h1, .hero-content h1 { font-size: 2.2em; margin-bottom: 10px; }
+.hero-text p, .hero-subtitle { font-size: 1.1em; line-height: 1.5; }
 
-/* Mobile adjustments */
-@media screen and (max-width:600px){
-  .hero-image { max-height: 200px; }
-  .hero-text h1 { font-size: 1.5em; }
-  .hero-text p { font-size: 0.9em; }
+.hero-actions { margin-top: 20px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-/* WhatsApp button correction */
+.btn.primary { background: var(--deep); color: #fff; }
+.btn.ghost { border: 1px solid var(--deep); color: var(--deep); }
+
+.hero-metrics {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.metric { font-size: 26px; font-weight: 700; }
+.metric-label { color: var(--muted); font-size: 13px; }
+
+/* Panel à droite */
+.hero-panel { position: relative; z-index: 2; }
+.panel-card {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(17,17,17,0.08);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section { padding: 70px 6vw; }
+
+.section-head { max-width: 650px; margin-bottom: 36px; }
+.section-eyebrow { text-transform: uppercase; letter-spacing: 2px; color: var(--accent-strong); font-size: 12px; margin-bottom: 8px; }
+.section-subtitle { color: var(--muted); }
+
+.cards, .missions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card, .mission, .bio-card, .contact-card {
+  background: var(--surface);
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(17,17,17,0.08);
+  box-shadow: 0 16px 30px rgba(17,17,17,0.08);
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Bio section */
+.bio-card { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 26px; padding: 30px; }
+
+/* Contact section */
+.contact { background: var(--deep); color: #fff; }
+.contact a { color: #ffe2c1; }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.15);
+  color: #fff;
+}
+
+/* WhatsApp button */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -67,9 +187,20 @@ a { color: inherit; text-decoration: none; }
   color: white;
   padding: 12px 18px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: bold;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 .whatsapp-button:hover { background-color: #1ebe5d; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media screen and (max-width: 900px) { .nav { display: none; } }
+@media screen and (max-width: 600px) {
+  .hero-image { height: 250px; }
+  .hero-content h1 { font-size: 1.5em; }
+  .hero-subtitle { font-size: 0.9em; }
+  .cards, .missions-grid, .bio-card, .contact-grid { grid-template-columns: 1fr; }
+}
