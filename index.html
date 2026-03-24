@@ -1,28 +1,20 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Qualitylife-CI | Assistance et représentation privée</title>
-  <meta name="description" content="Service d'assistance privée et de représentation. Excellence, discrétion et efficacité pour vos missions personnelles et professionnelles.">
-  <meta name="formspree-id" content="xgolprvw">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Service d'assistance privée et de représentation. Excellence, discrétion et efficacité pour vos missions personnelles et professionnelles." />
+  <!-- Formspree ID -->
+  <meta name="formspree-id" content="xgolprvw" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <!-- Bouton WhatsApp flottant -->
-<a href="https://wa.me/2250500989630" class="whatsapp-button" target="_blank">
+<a href="https://wa.me/2250500989630" class="whatsapp-button" target="_blank" rel="noopener">
   💬 WhatsApp
 </a>
-
-<!-- Section Hero -->
-<section class="hero-section">
-  <img src="hero-v2.png" class="hero-image" alt="Dirigeant professionnel observant un avion depuis son bureau">
-  <div class="hero-text">
-    <h1>Qualitylife-CI</h1>
-    <p>Votre service de conciergerie privée et assistance exécutive</p>
-  </div>
-</section>
 
 <!-- Header -->
 <header class="site-header">
@@ -43,8 +35,11 @@ DOCTYPE html>
 </header>
 
 <main>
-  <!-- Hero section détaillé -->
+  <!-- HERO -->
   <section class="hero">
+    <!-- Assure-toi que le fichier s'appelle exactement "hero.png" -->
+    <img src="hero.png" class="hero-image" alt="Dirigeant professionnel observant un avion depuis son bureau">
+
     <div class="hero-content">
       <p class="eyebrow">Excellence. Discrétion. Impact.</p>
       <h1>Votre représentation privée, assurée avec rigueur et élégance.</h1>
@@ -57,7 +52,8 @@ DOCTYPE html>
         <a class="btn primary" href="#contact">Demander un échange</a>
         <a class="btn ghost" href="#services">Voir les services</a>
       </div>
-      <div class="hero-metrics">
+
+      <div class="hero-metrics" aria-hidden="true">
         <div>
           <p class="metric">+10</p>
           <p class="metric-label">Types de missions gérées</p>
@@ -72,6 +68,7 @@ DOCTYPE html>
         </div>
       </div>
     </div>
+
     <div class="hero-panel">
       <div class="panel-card">
         <p class="panel-title">Votre partenaire privé</p>
@@ -93,27 +90,33 @@ DOCTYPE html>
       <h2>Un service complet pour vos besoins privés</h2>
       <p class="section-subtitle">Chaque mission est préparée sur mesure avec un protocole clair.</p>
     </div>
+
     <div class="cards">
       <article class="card">
         <h3>Représentation privée</h3>
         <p>Présence stratégique à vos événements, réunions, rendez-vous et cérémonies.</p>
       </article>
+
       <article class="card">
         <h3>Accompagnement de voyages</h3>
         <p>Organisation, logistique et présence durant les déplacements personnels ou professionnels.</p>
       </article>
+
       <article class="card">
         <h3>Assistance aux affaires</h3>
         <p>Support administratif, relationnel et opérationnel pour vos dossiers sensibles.</p>
       </article>
+
       <article class="card">
         <h3>Gestion d'achats</h3>
         <p>Recherche, négociation et coordination d'achats de confiance en toute discrétion.</p>
       </article>
+
       <article class="card">
         <h3>Coordination d'agenda</h3>
         <p>Planification, priorisation et suivi de vos rendez-vous et réunions clés.</p>
       </article>
+
       <article class="card">
         <h3>Conciergerie privée</h3>
         <p>Réponses rapides et solutions premium pour vos demandes urgentes.</p>
@@ -180,11 +183,11 @@ DOCTYPE html>
         <p class="section-eyebrow">Bio</p>
         <h2>À propos de moi</h2>
         <p>
-          Je suis le fondateur de Qualitylife-CI. J'interviens comme partenaire de confiance pour
+          Nous intervenons comme partenaire de confiance pour
           représenter, coordonner et exécuter vos missions privées avec rigueur, discrétion et précision.
         </p>
         <p>
-          Mon approche repose sur une écoute active, une méthodologie claire et un engagement total
+          notre approche repose sur une écoute active, une méthodologie claire et un engagement total
           envers l'excellence et la confidentialité.
         </p>
       </div>
@@ -207,6 +210,7 @@ DOCTYPE html>
       <h2>Parlons de votre mission</h2>
       <p class="section-subtitle">Réponse rapide et confidentielle.</p>
     </div>
+
     <div class="contact-grid">
       <div class="contact-card">
         <h3>Coordonnées</h3>
@@ -214,23 +218,30 @@ DOCTYPE html>
         <p>Téléphone : <a href="tel:+2250500989630">+225 05 00 98 96 30</a></p>
         <p>Adresse : Abidjan, Côte d'Ivoire</p>
       </div>
-      <form id="contact-form" class="contact-form" data-formspree-id="xgolprvw">
+
+      <!-- Formspree form: action + method -->
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xgolprvw" method="POST">
         <label>
           Nom complet
           <input type="text" name="name" placeholder="Votre nom" required />
         </label>
+
         <label>
           Email
           <input type="email" name="email" placeholder="Votre email" required />
         </label>
+
         <label>
           Mission souhaitée
           <textarea name="message" rows="4" placeholder="Décrivez votre besoin" required></textarea>
         </label>
+
         <button type="submit" class="btn primary">Envoyer la demande</button>
+
         <p class="form-note">Remplissez le formulaire puis cliquez sur <strong>Envoyer la demande</strong>. Si vous avez configuré Formspree, l'envoi s'effectuera automatiquement. Sinon, un mail s'ouvrira (fallback).</p>
-        <p class="form-status success" aria-hidden="true">Merci — votre message a été envoyé.</p>
-        <p class="form-status error" aria-hidden="true">Erreur lors de l'envoi. Veuillez réessayer ou contacter par email.</p>
+
+        <p class="form-status success" aria-hidden="true" style="display:none;">Merci — votre message a été envoyé.</p>
+        <p class="form-status error" aria-hidden="true" style="display:none;">Erreur lors de l'envoi. Veuillez réessayer ou contacter par email.</p>
       </form>
     </div>
   </section>
@@ -241,6 +252,40 @@ DOCTYPE html>
   <p>© 2026 Qualitylife-CI. Tous droits réservés.</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- Minimal JS pour gérer l'envoi du formulaire et afficher les messages -->
+<script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const successEl = form.querySelector('.form-status.success');
+      const errorEl = form.querySelector('.form-status.error');
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
+
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          successEl.style.display = 'block';
+          form.reset();
+        } else {
+          errorEl.style.display = 'block';
+        }
+      } catch (err) {
+        errorEl.style.display = 'block';
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
