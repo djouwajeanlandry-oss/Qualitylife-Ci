@@ -144,4 +144,23 @@ a { color: inherit; text-decoration: none; }
 /* RESPONSIVE */
 @media screen and (max-width: 600px) {
   .hero-image { height: 250px; }
+}body {
+  color: #111;
+}
+
+section {
+  color: #111;
+}
+
+h1, h2, h3 {
+  color: #000;
+}
+
+p {
+  color: #333;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
 }
