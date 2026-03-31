@@ -134,7 +134,7 @@ a { color: inherit; text-decoration: none; }
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   background: #25D366;
   color: white;
   padding: 12px 18px;
